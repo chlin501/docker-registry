@@ -11,34 +11,34 @@ public final class Setting {
   final static Logger log = LoggerFactory.getLogger(Setting.class);
 
   /* user home variable. */
-  protected String home = System.getProperty("user.home");
+  String home = System.getProperty("user.home");
 
   /* docker host default to unix socket value. */
-  protected String dockerHost = "unix:///var/run/docker.sock";
+  String dockerHost = "unix:///var/run/docker.sock";
 
   /* docker tls verify value; default to true. */
-  protected boolean dockerTlsVerify = true;
+  boolean dockerTlsVerify = true;
 
   /* docker cert path default to $HOME/.docker/certs */
-  protected String dockerCertPath = home+"/.docker/certs";
+  String dockerCertPath = home+"/.docker/certs";
 
   /* docker config; default to $HOME/.docker */
-  protected String dockerConfig = home+"/.docker";
+  String dockerConfig = home+"/.docker";
 
   /* api version; default to 1.21 */
-  protected String apiVersion = "1.21";
+  String apiVersion = "1.21";
 
   /* registry url; default to version 1 */
-  protected String registryUrl = "https://index.docker.io/v1/";
+  String registryUrl = "https://index.docker.io/v1/";
 
   /* registry user name; default to docker user. */
-  protected String registryUsername = "dockeruser";
+  String registryUsername = "dockeruser";
 
   /* registry password */
-  protected String registryPassword = "ilovedocker";
+  String registryPassword = "ilovedocker";
 
   /* registry email; default to dockeruser at github dot com */
-  protected String registryEmail = "dockeruser@github.com";
+  String registryEmail = "dockeruser@github.com";
 
   /**
    * Setting's Builder class.
